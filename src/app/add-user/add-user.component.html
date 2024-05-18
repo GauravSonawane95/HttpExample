@@ -1,0 +1,31 @@
+<div class="container w-50">
+    <h2 class="mb-2">User Form</h2>
+    <form [formGroup]="GetUserForm" (ngSubmit)="submit()">
+        <div class="mb-3">
+            <label for="id1" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="id1" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="id2" class="form-label">Mobile No</label>
+            <input type="text" class="form-control" id="id2" formControlName="mobile">
+        </div>
+        <div class="mb-3">
+            <label for="id3" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="id3" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Gender</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="id3" name="gender" value="male" formControlName="gender">
+                <label class="form-check-label" for="id3">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="id4" name="gender" value="female" formControlName="gender">
+                <label class="form-check-label" for="id4">Female</label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary m-2" (click)="navigateTo()">User List</button>
+    </form>
+</div>
